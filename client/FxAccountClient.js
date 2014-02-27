@@ -51,6 +51,10 @@ define(['./lib/request', 'sjcl', './lib/credentials', './lib/hawkCredentials', '
           var requestOpts = {};
 
           if (options) {
+            if (options.migrationToken) {
+              data.migrationToken = options.migrationToken;
+            }
+
             if (options.service) {
               data.service = options.service;
             }
