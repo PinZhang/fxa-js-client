@@ -1789,6 +1789,10 @@ define('client/FxAccountClient',['./lib/request', '../components/sjcl/sjcl', './
           var requestOpts = {};
 
           if (options) {
+            if (options.migrationToken) {
+              data.migrationToken = options.migrationToken;
+            }
+
             if (options.service) {
               data.service = options.service;
             }
